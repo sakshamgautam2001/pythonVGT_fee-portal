@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c2 %}
+
+<div class="container-fluid text-center">
+
+
+{% if data %}
+
+        <h2 class="text-center">Name - {{ data.name }}</h2>
+        <h2 class="text-center">Branch - {{ data.branch }}</h2>
+        <h2 class="text-center">Roll no. - {{ data.roll_number }}</h2>
+
+
+
+{% endif %}
+</div>
+{% endblock %}
+
+{% block c1 %}
+
+<h1 class="text-dark text-center">Edit Data Here</h1>
+
+<form method="post" action="../edit_data1/" class="form-group" style="border: 1px solid #040404; width: 500px" onsubmit="return G(this)">
+    {% csrf_token %}
+    <p>Name <input type="text" name="T1" id="T1" class="form-control"></p>
+    <p>Class <input type="text" name="T2" id="T2" class="form-control"></p>
+    <p>Roll number<input type="text" name="T3" id="T3" class="form-control"></p>
+
+    <p><button class="btn btn-success btn-block" type="submit">Update</button></p>
+    <p><input type="hidden" value="{{ data.email }}" name="H2"></p>
+</form>
+
+
+{% endblock %}

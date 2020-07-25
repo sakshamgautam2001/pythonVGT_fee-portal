@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+
+<h1 class="text-dark">Fees deposit</h1>
+
+{% if fee %}
+
+    <h3 class="text-dark">name - {{ fee.name }}</h3>
+    <h3 class="text-dark">standard - {{ fee.standard }}</h3>
+    <h3 class="text-dark">roll number - {{ fee.roll_number }}</h3>
+    <h3 class="text-dark">fees due - {{ fee.fees_due }}</h3>
+
+
+    <h3 class="text-center"><a href="../rest_fees/">Deposit rest fees</a></h3>
+
+
+{% endif %}
+
+{% endblock %}

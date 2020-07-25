@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+
+<h1 class="text-dark text-center">Change Photo</h1>
+
+<form method="post" action="../change_photo/" enctype="multipart/form-data" class="form-group" style="width: 500px; border: 2px solid #040404;" onsubmit="return E(this)">
+     {% csrf_token %}
+    <p>Upload File <input type="file" name="T1" id="T1" class="form-control"></p>
+    <p><button type="submit" class="btn btn-success btn-block">Change Photo</button></p>
+
+</form>
+
+{% if msg %}
+    <h3>{{ msg }}</h3>
+{% endif %}
+
+{% endblock %}

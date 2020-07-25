@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+
+
+<h1 class="text-dark text-center">Admin Home</h1>
+<div class="card" style="width: 400px; margin-left: auto; border: 2px solid #040404;">
+{% if ph %}
+    <p><img src="/media/{{ ph.photo }}" height="200px" width="100%" class="card-img"> </p>
+    <p><a href="../change_photo/">Change photo</a></p>
+    <p><a href="../delete_photo/">Delete photo</a></p>
+{% else %}
+    <h2>No Profile Picture</h2>
+    <p><a href="../upload_photo/">Upload profile picture</a></p>
+{% endif %}
+
+{% if dt %}
+    <div class="card-body">
+        <h2 class="card-title">{{ dt.name }}</h2>
+        <p class="card-text">Contact - {{ dt.contact }}</p>
+
+        <p class="card-text">email - {{ dt.email }}</p>
+    </div>
+{% endif %}
+
+</div>
+{% endblock %}
+{% block c2 %}
+<div class="container-fluid text-right">
+<p><a href="../logout/">Logout</a></p>
+<p><a href="../admin_reg/">Admin Reg</a></p>
+<p><a href="../employee_reg/">Employee reg</a> </p>
+<p><a href="../change_password/">Change password</a></p>
+<p><a href="../show_data/">Show data</a></p>
+<p><a href="../show_request">Show editing requests of students</a></p>
+</div>
+{% endblock %}

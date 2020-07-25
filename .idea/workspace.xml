@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8702f64-df59-4bf6-a873-d29b7a90ce67" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1005" />
+    <option name="height" value="689" />
+  </component>
+  <component name="ProjectId" id="1Pdm1R37Rg82gg4NmkQyjxNcrTY" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8702f64-df59-4bf6-a873-d29b7a90ce67" name="Default Changelist" comment="" />
+      <created>1561887923714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561887923714</updated>
+      <workItem from="1561887949294" duration="7480000" />
+      <workItem from="1561974601797" duration="11238000" />
+      <workItem from="1562002099580" duration="324000" />
+      <workItem from="1562061651331" duration="11948000" />
+      <workItem from="1562111577762" duration="198000" />
+      <workItem from="1562111869816" duration="153000" />
+      <workItem from="1562112338635" duration="5710000" />
+      <workItem from="1562146496953" duration="18129000" />
+      <workItem from="1562212364057" duration="1224000" />
+      <workItem from="1562322161071" duration="312000" />
+      <workItem from="1562384305671" duration="67000" />
+      <workItem from="1562386841828" duration="3151000" />
+      <workItem from="1562390622988" duration="559000" />
+      <workItem from="1562433508237" duration="81000" />
+      <workItem from="1562440257330" duration="1075000" />
+      <workItem from="1562441766727" duration="51000" />
+      <workItem from="1562467695181" duration="93000" />
+      <workItem from="1563040949600" duration="116000" />
+      <workItem from="1563216277816" duration="183000" />
+      <workItem from="1563218082815" duration="555000" />
+      <workItem from="1565721042790" duration="36000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="87968000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

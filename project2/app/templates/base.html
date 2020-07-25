@@ -1,0 +1,398 @@
+{% load static %}
+<html>
+<head>
+<title>Base</title>
+<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-4.0.0-dist/css/bootstrap.css">
+<script type="text/javascript" src="../static/css/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../static/css/jquery.js"></script>
+<script>
+function A(f)
+{
+	if(require(f.T1,'email field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(require(f.T2,'Password field is empty')==false){
+		f.T2.focus();
+		return false;}
+		
+	}
+	
+function D(f)
+{
+	if(require(f.T1,'Password field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(require(f.T2,'New Password field is empty')==false){
+		f.T2.focus();
+		return false;}
+	else if(require(f.T3,'Confirm Password field is empty')==false){
+		f.T3.focus();
+		return false;}
+	else if(passmatch(f.T2,f.T3,'Password and confirm password not matching')==false){
+		f.T3.focus();
+		return false;}
+		
+	}
+	
+function G(f)
+{
+	if(require(f.T1,'Name field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(onlyalpha(f.T1,'Name containing numbers')==false){
+		f.T1.focus();
+		return false;}
+	else if(require(f.T2,'Branch field is empty')==false){
+		f.T2.focus();
+		return false;}
+	else if(onlyclass(f.T2,'Classes are only from 4 to 10')==false){
+		f.T2.focus();
+		return false;
+		}
+	else if(require(f.T3,'Roll number field is empty')==false){
+		f.T3.focus();
+		return false;}
+		
+	}
+	
+function H(f)
+{
+	if(require(f.T1,'Request message field is empty')==false){
+		f.T1.focus();
+		return false;}
+	
+	else if(require(f.T3,'Standard field is empty')==false){
+		f.T3.focus();
+		return false;}
+	
+	else if(require(f.T2,'Name field is empty')==false){
+		f.T2.focus();
+		return false;}
+	
+	else if(onlyalpha(f.T2,'Name containing numbers')==false){
+		f.T2.focus();
+		return false;}
+	
+	else if(onlyclass(f.T3,'Classes are only from 4 to 10')==false){
+		f.T3.focus();
+		return false;
+		}
+	else if(require(f.T4,'Roll number field is empty')==false){
+		f.T4.focus();
+		return false;}
+		
+	}
+	
+function E(f)
+{
+	if(require(f.T1,'Please Upload a file')==false){
+		f.T1.focus();
+		return false;}
+	
+		
+	}
+function B(f){
+	if(require(f.T1,'name field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(onlyalpha(f.T1,'name containing letters')==false){
+		f.T1.focus;
+		return false;}
+	else if(require(f.T2,'Class field is empty')==false){
+		f.T2.focus();
+		return false;}
+	else if(onlyclass(f.T2,'Class are only from 4 to 10')==false){
+		f.T2.focus();
+		return false;}
+	else if(require(f.T3,'Roll number field is empty')==false){
+		f.T3.focus();
+		return false;}
+	else if(require(f.T4,'Email field is empty')==false){
+		f.T4.focus();
+		return false;}
+	else if(require(f.T5,'Password field is empty')==false){
+		f.T5.focus();
+		return false;}
+	
+	else if(require(f.T6,'Please Confirm your password')==false){
+		f.T6.focus();
+		return false;}
+	else if(passmatch(f.T5,f.T6,'Password and confirm password not matching')==false){
+		f.T6.focus();
+		return false;}
+}
+
+function I(f){
+	if(require(f.T1,'name field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(onlyalpha(f.T1,'name containing letters')==false){
+		f.T1.focus;
+		return false;}
+	else if(require(f.T2,'ID field is empty')==false){
+		f.T2.focus();
+		return false;}
+	
+	else if(require(f.T4,'Contact field is empty')==false){
+		f.T4.focus();
+		return false;}
+	else if(onlynum(f.T4,'Contact containing letters')==false){
+		f.T4.focus();
+		return false;}
+	else if(mobrange(9999999999,6000000000,f.T4,'Enter valid number')==false){
+		f.T4.focus();
+		return false;}
+		
+	else if(require(f.T3,'Email field is empty')==false){
+		f.T3.focus();
+		return false;}
+	else if(require(f.T5,'Password field is empty')==false){
+		f.T5.focus();
+		return false;}
+	
+	else if(require(f.T6,'Please Confirm your password')==false){
+		f.T6.focus();
+		return false;}
+	else if(passmatch(f.T5,f.T6,'Password and confirm password not matching')==false){
+		f.T6.focus();
+		return false;}
+}
+
+function J(f){
+	if(require(f.T1,'deposit field is empty')==false){
+		f.T1.focus();
+		return false;}
+	}
+	
+function K(f){
+	if(require(f.T1,'search field is empty')==false){
+		f.T1.focus();
+		return false;}
+	}
+	
+
+function F(f){
+	if(require(f.T1,'name field is empty')==false){
+		f.T1.focus();
+		return false;}
+	else if(onlyalpha(f.T1,'name containing letters')==false){
+		f.T1.focus;
+		return false;}
+	else if(require(f.T3,'Contact field is empty')==false){
+		f.T3.focus();
+		return false;}
+	else if(onlynum(f.T3,'Contact containing letters')==false){
+		f.T3.focus();
+		return false;}
+	else if(mobrange(9999999999,6000000000,f.T3,'Enter valid number')==false){
+		f.T3.focus();
+		return false;}
+	else if(require(f.T4,'Email field is empty')==false){
+		f.T4.focus();
+		return false;}
+	else if(require(f.T5,'Password field is empty')==false){
+		f.T5.focus();
+		return false;}
+	
+	else if(require(f.T6,'Please Confirm your password')==false){
+		f.T6.focus();
+		return false;}
+	else if(passmatch(f.T5,f.T6,'Password and confirm password not matching')==false){
+		f.T6.focus();
+		return false;}
+}
+		
+function require(ele,msg){
+	if(ele.value==null||ele.value==''){
+		alert(msg);
+		return false;
+		}
+	else{
+		return true;}
+	}	
+
+function P(){
+	var n=document.getElementById('T2');
+	if(n.type=='password'){
+		n.type='text';}
+	else{
+		n.type='password';}
+	}	
+function PP(){
+	var n=document.getElementById('T5');
+	if(n.type=='password'){
+		n.type='text';}
+	else{
+		n.type='password';}
+	}	
+function PPP(){
+	var n=document.getElementById('T2');
+	if(n.type=='password'){
+		n.type='text';}
+	else{
+		n.type='password';}
+	}	
+function passmatch(pass,cpass,msg){
+	if(pass.value!=cpass.value){
+		alert(msg);
+		return false;}
+	else{
+		return true;}
+	}
+function onlyalpha(ele,msg){
+	var letter=/^[A-Z a-z]+$/;
+	if(ele.value.match(letter)){
+		return true;}
+	else{
+		alert(msg);
+		return false;}
+	}
+function onlyclass(ele,msg){
+	if((ele.value<4)||(ele.value>10)){
+		alert(msg);
+		return false;}
+	else{
+		return true;}
+	}
+function onlynum(ele,msg){
+	var number=/^[0-9]+$/;
+	if(ele.value.match(number)){
+		return true;}
+	else{
+		alert(msg);
+		return false;}
+	}
+function mobrange(mx,mn,ele,msg){
+	if((ele.value<mn)||(ele.value>mx)){
+		alert(msg);
+		return false;}
+	else{
+		return true;}
+	}
+	
+$(document).ready(function(e) {
+    $('#t1').click(function(e) {
+        $('#colnav').toggle();
+    });
+});
+
+
+</script>
+
+
+<style>
+*{
+	margin:0;}
+	
+.bgimg{
+	background:url(../static/images/notes.jpg);
+	height:400px;
+	width:100%;
+	background-size:100% 100%;
+	overflow:scroll;}
+	
+.text1{
+	height:400px;
+	}
+</style>
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+	<p class="navbar-brand text-warning font-weight-bold">VGT</p>
+    
+    <button class="navbar-toggler" id="t1">
+    	<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="colnav">
+    	<ul class="navbar-nav text-center ml-auto">
+        	<li class="nav-item"><a href="../go_home/" class="nav-link ml-5" style="font-size:22px;">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link ml-5" style="font-size:22px;">Refresh</a></li>
+            <li class="nav-item"><a href="../login/" class="nav-link ml-5" style="font-size:22px;">Login</a></li>
+            <li class="nav-item"><a href="../student_reg/" class="nav-link ml-5" style="font-size:22px;">Sign-Up</a></li>
+            <li class="nav-item"><a href="../logout/" class="nav-link ml-5" style="font-size:22px;">Logout</a></li>
+            <li class="nav-item"><a href="../change_password/" class="nav-link ml-5" style="font-size:22px;">Change Password</a></li>
+            
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid bg-primary header">
+	<h1 class="text-white text-center jumbotron bg-primary">Fees Deposit System</h1>
+    <marquee class="bg-danger container-fluid text-warning" style="width:500px;">This system is a fees deposition system which promotes convinent methods to manage account releted databases.</marquee>
+</div>
+<div class="container-fluid">
+	{% block c3 %}
+    
+    {% endblock %}
+
+	
+</div>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-5" style="height:auto">
+    {% block c1 %}
+    
+    {% endblock %}
+    </div>
+    <div class="col-lg-7" style="height:auto">
+    {% block c2 %}
+    
+    {% endblock %}
+    </div>
+
+	
+</div>
+
+</div>
+<div class="container-fluid bgimg text-center">
+     <h1 class=" text-dark">Welocome To Fees Deposit Home</h1>
+
+        <div class="container-fluid text-center">
+        <button class="btn btn-success" id="b1"><a href="../student_reg/" style="color: white; text-decoration: none">Register</a></button>
+        <button class="btn btn-success ml-lg-5"><a href="../login/" style="color: white; text-decoration: none">Login</a></button>
+        
+        
+
+
+
+        </div>
+</div>
+<div class="container-fluid">
+<div class="row">
+	<div class=" col-lg-8 text1">	
+
+    {% if emp %}
+        <h1 class="text-dark">Employee Data</h1>
+        <table class="table table-bordered table-hover">
+            <tr class="thead-dark">
+                <th>Name</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+        {% for a in emp %}
+            <tr>
+                <td>{{ a.name }}</td>
+                <td>{{ a.ID }}</td>
+                <td>{{ a.email }}</td>
+                <td>{{ a.contact }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+	</div>
+    <div class="col-lg-4 text2">
+    
+    
+    </div>
+
+</div>
+        
+    
+</div>
+
+
+</body>
+</html>

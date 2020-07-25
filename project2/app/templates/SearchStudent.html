@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+<h1 class="text-center text-dark">Search student here</h1>
+
+<form method="post" action="../search_student/" class="form-group" style="border: #040404;" onsubmit="return K(this)">
+    {% csrf_token %}
+    <h2 class="text-dark text-center"><input type="email" name="T1" placeholder="enter email of student" id="T1" class="form-control"></h2>
+    <p><button class="btn btn-success btn-block" type="submit">Search</button></p>
+
+</form>
+
+{% endblock %}
+{% block c2 %}
+
+{% if a %}
+        <div class="card ml-auto" style="width: 350px; border: 2px solid #040404; ">
+
+        <img src="/media/{{a.photo}}" height="200px" width="100%" class="card-img">
+
+        <div class="card-body">
+        <p>Name - {{a.name}}</p>
+        <p>Standard - {{a.standard}}</p>
+        <p>roll number - {{a.roll_number}}</p>
+        <p>Email - {{a.email}}</p>
+        <p>Fees Due - {{a.fees_due}}</p><hr/>
+        </div>
+        </div>
+
+
+{% elif msg %}
+    <h3 class="text-center text-dark">{{msg}}</h3>
+
+{% endif %}
+
+
+{% endblock %}

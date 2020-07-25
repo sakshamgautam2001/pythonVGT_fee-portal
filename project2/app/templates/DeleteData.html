@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+<div class="container-fluid text-right" style="height: 200px;">
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+<p><a href="../admin_home/">Go To Home</a></p>
+</div>
+
+{% endblock %}

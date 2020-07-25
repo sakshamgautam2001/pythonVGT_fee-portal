@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+{% if msg %}
+    <h2 class="text-dark">{{ msg }}</h2>
+    <p><a href="../show_data/">Go to updated data...</a></p>
+{% endif %}
+
+{% endblock %}
+

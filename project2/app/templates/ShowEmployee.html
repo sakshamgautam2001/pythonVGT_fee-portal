@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c2 %}
+    {% if emp %}
+        <h1 class="text-dark">Employee Data</h1>
+        <table class="table table-bordered table-hover">
+            <tr class="thead-dark">
+                <th>Name</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+        {% for a in emp %}
+            <tr>
+                <td>{{ a.name }}</td>
+                <td>{{ a.ID }}</td>
+                <td>{{ a.email }}</td>
+                <td>{{ a.contact }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+
+
+
+
+
+{% endblock %}

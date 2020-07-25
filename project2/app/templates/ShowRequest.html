@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c3 %}
+<div class="row">
+<div class="col-lg-12">
+    <h1 class="text-dark text-center">Here are the following requests to update</h1></div>
+
+{% if requests %}
+
+    {% for req in requests %}
+        <div class="col-lg-4">
+        <div class="card" style="width: 350px; border: 2px solid #040404;">
+        <h2 class="card-title"> {{ req.email }}</h2>
+        <p class="card-text">Request - {{ req.message }}</p>
+        <h3 class="card-title">What to update</h3>
+        <p class="card-text">name - {{ req.name }}</p>
+        <p class="card-text">class - {{ req.standard }}</p>
+        <p class="card-text">roll number - {{ req.roll_number }}</p><hr/>
+        </div>
+        </div>
+
+    {% endfor %}
+{% else %}
+    <h3>No requests of editing</h3>
+
+{% endif %}
+</div>
+{% endblock %}

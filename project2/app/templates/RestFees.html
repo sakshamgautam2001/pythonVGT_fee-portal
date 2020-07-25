@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+<h1 class="text-dark">Deposit rest fees</h1>
+{% if mg %}
+    <h3 class="text-dark text-center">{{mg}}</h3>
+{% elif fee %}
+    <h3 class="text-dark text-center">Your Remaining fee amount is - {{ fee.fees_due }}</h3>
+
+
+
+        <form method="post" action="../rest_fees/" class="form-group" style="border: 1px solid #040404" onsubmit="return J(this)">
+        {% csrf_token %}
+        <p>enter your amount here <input type="number" max="{{ fee.fees_due }}" min="0" name="T1" id="T1" class="form-control"></p>
+        <p><button class="btn btn-success btn-block" type="submit">Deposit</button></p>
+
+        </form>
+{% endif %}
+
+{% if msg %}
+    <h3>{{ msg }}</h3>
+{% endif %}
+
+
+{% endblock %}
+

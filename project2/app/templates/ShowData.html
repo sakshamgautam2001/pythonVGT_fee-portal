@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c3 %}
+
+<div class="row">
+<div class="col-lg-12">
+    <h2 class="text-center text-dark">Students Data</h2>
+    <form method="post" action="../search_student/" class="form-group" style="border: #040404; width: 350px;" onsubmit="return K(this)">
+    {% csrf_token %}
+    <h2 class="text-dark text-center"><input type="email" name="T1" placeholder="enter email of student" id="T1" class="form-control"></h2>
+    <p><button class="btn btn-success btn-block" type="submit">Search</button></p>
+
+    </form>
+</div>
+
+
+{% if data %}
+    {% for a in data %}
+        <div class="col-lg-4">
+        <div class="card" style="width: 350px; border: 2px solid #040404;">
+            <img src="/media/{{a.photo}}" height="200px" width="100%" class="card-img">
+            <div class="card-body">
+                <h2 class="text-dark"> {{ a.name }}</h2>
+                <p>Class : {{ a.standard }}</p>
+                <p>Roll number : {{ a.roll_number }}</p>
+                <p>Email : {{ a.email }}</p>
+            </div>
+            <div class="card-footer">
+`
+                <form method="post" action="../edit_data/" >
+                    {% csrf_token %}
+                    <p><button class="btn btn-success">Edit</button></p>
+                    <p><input type="hidden" name="H1" value="{{ a.email }}"> </p>
+                </form>
+                <form method="post" action="../delete_data/">
+                    {% csrf_token %}
+                    <p><button class="btn btn-danger ml-auto">Delete</button></p>
+                    <p><input type="hidden" name="H1" value="{{ a.email }}"> </p>
+                </form>
+            </div>
+
+
+        </div>
+        </div>
+
+    {% endfor %}
+
+
+{% else %}
+    <h3>no data to show</h3>
+
+{% endif %}
+</div>
+
+{% endblock %}

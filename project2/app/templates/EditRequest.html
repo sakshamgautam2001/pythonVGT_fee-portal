@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+<h1 class="text-center text-dark">Request Your Edit Here</h1>
+
+<form action="../edit_request/" method="post" class="form-group" style="border: 1px solid #040404;" onsubmit="return H(this)">
+     {% csrf_token %}
+    <p>Why you want to edit your data? <textarea name="T1" id="T1" class="form-control" placeholder="not more than 1000 characters"></textarea></p>
+    <h2 class="text-center text-dark">Update your entries below</h2>
+    <p>Name <input type="text" name="T2" id="T2" class="form-control"></p>
+    <p>Standard<input type="text" name="T3" id="T3" class="form-control"></p>
+    <p>roll number<input type="text" name="T4" id="T4" class="form-control"></p>
+
+
+    <p><button class="btn btn-block btn-success" type="submit">Request</button></p>
+</form>
+
+{% if msg %}
+    <h3 class="text-dark">{{ msg }}</h3>
+{% endif %}
+
+
+{% endblock %}

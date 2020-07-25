@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c3 %}
+
+
+
+<div class="row">
+<div class="col-lg-12"><h2 class="text-center text-dark">Students having due fees</h2></div>
+{% if due %}
+
+
+
+
+
+    {% for a in due %}
+        <div class="col-lg-4">
+        <div class="card" style="width: 350px; border: 2px solid #040404;">
+
+        <img src="/media/{{a.photo}}" height="200px" width="100%" class="card-img">
+
+        <div class="card-body">
+        <p>Name - {{a.name}}</p>
+        <p>Standard - {{a.standard}}</p>
+        <p>roll number - {{a.roll_number}}</p>
+        <p>Email - {{a.email}}</p>
+        <p>Fees Due - {{a.fees_due}}</p><hr/>
+        </div>
+        </div>
+        </div>
+    {% endfor %}
+
+
+{% else %}
+    <h3>No student having due fees</h3>
+{% endif %}
+
+</div>
+
+{% endblock %}

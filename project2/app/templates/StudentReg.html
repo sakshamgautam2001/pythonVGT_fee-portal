@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block c1 %}
+
+
+
+<h1 class="text-dark text-center">Register Now</h1>
+
+<form method="post" action="../student_reg/" class="form-group" style="width: 500px; border: 2px solid #040404;" onsubmit="return B(this)">
+    {% csrf_token %}
+
+    <p>Name <input type="text" name="T1" class="form-control" id="T1"></p>
+    <p>Class <input type="text" name="T2" class="form-control" id="T2"></p>
+    <p>Roll Number <input type="text" name="T3" class="form-control" id="T3"></p>
+    <p>Email <input type="email" name="T4" class="form-control" id="T4"></p>
+    <p>Password <input type="password" name="T5" class="form-control" id="T5"></p>
+    <p>show password<input type="checkbox" onclick="PP()"></p>
+    <p>Confirm Password <input type="password" name="T6" class="form-control" id="T6"></p>
+    <p><button class="btn btn-success btn-block" type="submit">Register</button></p>
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+
+
+{% endblock %}
